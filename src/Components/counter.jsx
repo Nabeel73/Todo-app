@@ -7,6 +7,12 @@ class Counter extends Component {
         tags :['tag1','tag2','tag3']
 
     };
+    
+    renderTags()         {
+           
+        if (this.state.tags === 0 ) return <p>There is no Tags!</p>;
+        return <ul>{this.state.tags.map(tags=><li key={tags}>{tags}</li>)}</ul>
+    }
     styles = {
         fontSize : 24,
         fontWeight : "bold",
@@ -18,18 +24,18 @@ class Counter extends Component {
             classes += (this.state.count === 0) ? "warning" : "primary";
 
           
-  return( 
+      return( 
         <div>
         <img src={this.state.imageUrl}  alt=""/>
         <span>{this.formatcount()}</span><br></br>
         <span>{5*5}</span>
-     
+   
         <hr></hr>
         <span style={this.styles} className="badge badge-warning m-3">{this.formatcount()}</span>
         <span className={classes}>{this.formatcount()}</span>
         <button className="btn btn-secondary btn-sm">Increment</button>
-        <ul>{this.state.tags.map(tags=><li key={tags}>{tags}</li>)}</ul>
-
+       {/* <ul>{this.state.tags.map(tags=><li key={tags}>{tags}</li>)}</ul>*/}
+        {this.renderTags() }
         </div>
         );
     }
