@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 class Counter extends Component {
     state  = {
-        count : 1
-       //imageUrl:"https://picsum.photos/200/300?image=0",
-      //  tags : []
+      count : 1,
+      imageUrl:"https://picsum.photos/200/300?image=0",
+     tags : []
     };
     constructor(){
      // console.log("Constructor",this );
@@ -17,14 +17,15 @@ class Counter extends Component {
     render(){
         return(
             <div>
+                <h1>Hello Counter App</h1>
+                <span>{this.state.count}</span><br/><br/><br/>
+                <button>Add</button>          <button>Delete</button><br/><br/><br/>
+            <button onClick={this.handlerIncrement} className="btn btn-secondary btn-sm">Increment</button>
+           
            {/*<span className={this.getBadgeClasses()}>{this.formatCount()}</span>*/}
-            <button onClick={this.handlerIncrement} className="btn btn-secondary btn-sm">Increment</button>
-            
-            <button onClick={this.handlerIncrement} className="btn btn-secondary btn-sm">Increment</button>
-            
-
-            
+                              
             </div>
+
             
         );
     }
