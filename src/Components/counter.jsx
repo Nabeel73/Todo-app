@@ -22,6 +22,7 @@ class Counter extends Component {
         return(
             <div>
                 <h1>Hello Counter App</h1>
+                <img src={this.state.imageUrl} alt=""></img>
                 <span>{this.state.count}</span><br/><br/><br/>
                 <button onClick={this.addNumber} className="btn btn-secondary btn-sm">Add</button> 
                 <button onClick={this.handlerIncrement} className="btn btn-danger btn-sm">Delete</button><br/><br/><br/>
