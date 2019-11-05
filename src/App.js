@@ -7,7 +7,7 @@ class App extends Component {
         return ( <
             div className = "App" >
             <
-            header className = "App-header" > < /header> <
+            header className = "App-header" > < /header>  <
             img src = { logo }
             className = "App-logo"
             alt = "logo" / >
@@ -17,7 +17,8 @@ class App extends Component {
             a className = "App-link"
             href = "https://reactjs.org"
             target = "_blank"
-            rel = "noopener noreferrer" > Learn React < /a> 
+            rel = "noopener noreferrer" > Learn React < /a>
+
 
             <
             /div>
